@@ -20,10 +20,9 @@ imgItem(galleryItems)
 const galleryImgArr = galleryItems.map((el) => imgItem(el))   
 listEl.insertAdjacentHTML('beforeend', galleryImgArr.join(''));
 
-
 const onImgClick = (event) =>{
     event.preventDefault()
-    const {target: {nodeName, dataset}} = event
+    const {target:{nodeName,dataset }} = event
 
     if (nodeName !== 'IMG') {
         return;
@@ -34,6 +33,12 @@ const onImgClick = (event) =>{
     <img src="${originalUrl}" width="800" height="600">
 `);
     makeImgBig.show()
+
+    listEl.addEventListener('keydown', (event) => {
+        if(event.code === 'Escape') {
+            makeImgBig.close();
+        }
+    });
 }
 
-listEl.addEventListener('click', onImgClick)
+listEl.addEventListener('click', onImgClick);
