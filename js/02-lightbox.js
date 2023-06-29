@@ -22,12 +22,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
     captionDelay: 250,
     captionsData: "alt"
 });
-
-listEl.addEventListener('click', (event) => {
-    event.preventDefault();
-    const{ nodeName} = target.event;
-   if (nodeName !== 'IMG') {
-    return;
-  }
-    lightbox.open();
-});
