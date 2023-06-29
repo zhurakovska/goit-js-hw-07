@@ -1,7 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 const listEl = document.querySelector('.gallery')
 
-const imgItem =({preview, original, description} = {}) =>(
+const imgItem =({preview, original, description}) =>(
     `<li class="gallery__item">
         <a class="gallery__link" href="${original}">
             <img
