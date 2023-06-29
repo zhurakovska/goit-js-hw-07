@@ -17,7 +17,7 @@ const imgItem = ({ preview, original, description }) => (
 
 imgItem(galleryItems);
 
-const galleryImgArr = galleryItems.map((el) => imgItem(el));
+const galleryImgArr = galleryItems.map(imgItem);
 listEl.insertAdjacentHTML('beforeend', galleryImgArr.join(''));
 
 let currentModal = null;

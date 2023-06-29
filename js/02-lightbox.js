@@ -15,7 +15,7 @@ const imgItem =({preview, original, description}) =>(
 
 imgItem(galleryItems)
 
-const galleryImgArr = galleryItems.map((el) => imgItem(el))   
+const galleryImgArr = galleryItems.map(imgItem)   
 listEl.insertAdjacentHTML('beforeend', galleryImgArr.join(''));
   
 const lightbox = new SimpleLightbox(".gallery a", {
@@ -30,4 +30,4 @@ listEl.addEventListener('click', (event) => {
     return;
   }
     lightbox.open();
-  });
+});
